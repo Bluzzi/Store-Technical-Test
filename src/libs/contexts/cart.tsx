@@ -1,4 +1,4 @@
-import { IProduct } from "../types/product";
+import { IProduct } from "#/libs/types/product";
 import { useState, createContext, PropsWithChildren, useContext, useEffect, ReactElement } from "react";
 
 type UseCartOutput = {
