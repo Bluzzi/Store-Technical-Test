@@ -5,6 +5,7 @@ import { Products } from './pages/Products';
 import { ProductDetail } from './pages/ProductDetail';
 import { Cart } from './pages/Cart';
 import { CartProvider } from './contexts/cart';
+import { Home } from './pages/Home';
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
