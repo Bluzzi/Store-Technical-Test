@@ -7,7 +7,7 @@ import { Navbar } from "./libs/components/navbar";
 import { Home } from "./pages/Home";
 import { Products } from "./pages/Products";
 import { ProductDetail } from "./pages/ProductDetail";
-import { Cart } from "./pages/Cart";
+import { Cart } from "#/pages/cart";
 import "./libs/styles/tailwind.css";
 
 const queryClient = new QueryClient();
