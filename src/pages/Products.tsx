@@ -1,9 +1,10 @@
+import type { ReactElement } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { jsonFetch } from "../utils/fetch";
-import { IProduct } from "../types/product";
-import { Product } from "../components/Product";
+import { jsonFetch } from "#/libs/utils/fetch";
+import { IProduct } from "#/libs/types/product";
+import { Product } from "#/libs/components/product";
 
-export function Products() {
+export function Products(): ReactElement {
   const { data, status } = useQuery(["/products"], () => jsonFetch<IProduct[]>("/products"));
 
   if (status === "loading") return <p>Loading...</p>;

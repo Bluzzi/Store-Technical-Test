@@ -1,17 +1,18 @@
+import type { ReactElement } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { jsonFetch } from "../utils/fetch";
-import { IProduct } from "../types/product";
-import { useCartContext } from "../contexts/cart";
+import { jsonFetch } from "#/libs/utils/fetch";
+import { IProduct } from "#/libs/types/product";
+import { useCartContext } from "#/libs/contexts/cart";
 
-export function ProductDetail() {
+export function ProductDetail(): ReactElement {
   const { productId } = useParams();
   const cart = useCartContext();
   const navigate = useNavigate();
 
   const { data, status } = useQuery(["/products", productId], () => jsonFetch<IProduct>(`/products/${productId}`));
 
-  const addToCart = (product: IProduct) => {
+  const addToCart = (product: IProduct): void => {
     cart.add(product);
     navigate("/cart");
   };

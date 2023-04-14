@@ -1,7 +1,8 @@
+import type { ReactElement } from "react";
 import { useCartContext } from "../libs/contexts/cart";
 import { Link } from "react-router-dom";
 
-export function Cart() {
+export function Cart(): ReactElement {
   const cart = useCartContext();
 
   return (
