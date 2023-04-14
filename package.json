@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "serve dist",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.1",
