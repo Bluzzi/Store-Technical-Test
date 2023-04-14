@@ -1,9 +1,4 @@
-# Task
-
-Clone and make use of current repo as a basis.
-
-Create web store application.
-
+## Tasks
 ### Product Listing: /products
 - View all available products
 - Pagination
@@ -17,9 +12,4 @@ Create web store application.
 - Delete item from cart
 
 ## API
-https://fakestoreapi.com/
-
-
-### Notes
-Project has `react-router-dom` v6 installed. Documentation:
-https://reactrouter.com/docs/en/v6/getting-started/overview
+https://fakestoreapi.com
