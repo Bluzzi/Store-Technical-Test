@@ -6,8 +6,8 @@ export function Navbar(): ReactElement {
   const productCount = useCartStore(state => state.products.length);
 
   const links = [
-    { name: "Products", link: "/products" },
-    { name: `Cart (${productCount})`, link: "/products" }
+    { name: "Products", link: "/" },
+    { name: `Cart (${productCount})`, link: "/cart" }
   ];
 
   return (
