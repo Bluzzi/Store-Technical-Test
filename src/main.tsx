@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <div className="bg-gray-100 h-screen">
+        <div className="bg-gray-100 min-h-screen">
           <Navbar />
 
           <Routes>
