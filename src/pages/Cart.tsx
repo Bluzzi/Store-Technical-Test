@@ -1,6 +1,5 @@
 import { Button } from "#/libs/components/button";
 import { Loading } from "#/libs/components/loading";
-import { ProductCard } from "#/libs/components/product-card";
 import { ProductCart } from "#/libs/components/product-cart";
 import { useCartStore } from "#/libs/stores/cart/cart.store";
 import { IProduct } from "#/libs/types/product";
