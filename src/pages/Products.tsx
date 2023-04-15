@@ -3,12 +3,12 @@ import { useQuery } from "@tanstack/react-query";
 import { jsonFetch } from "#/libs/utils/fetch";
 import { IProduct } from "#/libs/types/product";
 import { ProductCard } from "#/libs/components/product-card";
+import { Loading } from "#/libs/components/loading";
 
 export function Products(): ReactElement {
   const { data, status } = useQuery(["/products"], () => jsonFetch<IProduct[]>("/products"));
 
-  if (status === "loading") return <p>Loading...</p>;
-
+  if (status === "loading") return <Loading />;
   if (status === "error") return <p>API error</p>;
 
   return (
