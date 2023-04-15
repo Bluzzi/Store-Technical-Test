@@ -5,7 +5,7 @@ import { useCartStore } from "#/libs/stores/cart/cart.store";
 import { IProduct } from "#/libs/types/product";
 import { jsonFetch } from "#/libs/utils/fetch";
 import { useQuery } from "@tanstack/react-query";
-import type { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 
 export function Cart(): ReactElement {
   const products = useCartStore(state => state.products);
@@ -19,6 +19,10 @@ export function Cart(): ReactElement {
 
     return Promise.all(promises);
   });
+
+  useEffect(() => {
+    console.log(products);
+  }, [products]);
 
   if (status === "loading") return <Loading />;
   if (status === "error") return <p>API error</p>;
