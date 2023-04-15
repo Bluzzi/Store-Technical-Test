@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { jsonFetch } from "#/libs/utils/fetch";
 import { IProduct } from "#/libs/types/product";
-import { Product } from "#/libs/components/product";
+import { ProductCard } from "#/libs/components/product-card";
 
 export function Products(): ReactElement {
   const { data, status } = useQuery(["/products"], () => jsonFetch<IProduct[]>("/products"));
@@ -12,15 +12,14 @@ export function Products(): ReactElement {
   if (status === "error") return <p>API error</p>;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-      <h1>Product list</h1>
-
+    <div className="flex flex-col items-center justify-center gap-5 py-5">
       {data.map(product => (
-        <Product
+        <ProductCard
           key={product.id}
           id={product.id}
           title={product.title}
           description={product.description}
+          image={product.image}
           price={product.price}
         />
       ))}
