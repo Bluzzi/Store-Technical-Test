@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Button } from "./button";
-import { useCartStore } from "../stores/cart/cart.store";
+import { useCartStore } from "../stores/cart";
 
 type ProductCartProps = {
   id: number;

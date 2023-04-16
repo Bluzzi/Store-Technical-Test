@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { jsonFetch } from "#/libs/utils/fetch";
 import { IProduct } from "#/libs/types/product";
-import { useCartStore } from "#/libs/stores/cart/cart.store";
+import { useCartStore } from "#/libs/stores/cart";
 import { Loading } from "#/libs/components/loading";
 import { Button } from "#/libs/components/button";
 

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
-import { useCartStore } from "#/libs/stores/cart/cart.store";
+import { useCartStore } from "#/libs/stores/cart";
 
 export function Navbar(): ReactElement {
   const productCount = useCartStore(state => state.products.length);
