@@ -52,6 +52,16 @@ describe("useCartStore", () => {
     expect(getProductQuantity(5)).toBeUndefined();
   });
 
+  test("must be remove the product but not others products", () => {
+    incProduct(5);
+    incProduct(6);
+
+    removeProduct(5);
+
+    expect(getProductQuantity(5)).toBeUndefined();
+    expect(getProductQuantity(6)).toBe(1);
+  });
+
   test("must be able to contain several products", () => {
     incProduct(5);
     incProduct(6);
