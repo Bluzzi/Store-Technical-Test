@@ -23,6 +23,8 @@ export function Cart(): ReactElement {
   if (status === "loading") return <Loading />;
   if (status === "error") return <p>API error</p>;
 
+  if (!data.length) return <p className="my-5 text-center text-xl">No products in your cart</p>;
+
   return (
     <div className="flex flex-col items-center gap-5 py-5">
       {data.map(product => (
