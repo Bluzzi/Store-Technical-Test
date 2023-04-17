@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "start": "serve dist",
+    "start": "serve dist --single",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "test:unit": "vitest --ui"
