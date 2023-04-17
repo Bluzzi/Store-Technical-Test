@@ -1,7 +1,6 @@
 ## Tasks
 ### Product Listing: /products
 - View all available products
-- Pagination
 
 ### Product detail: /products/:productId
 - View product information
